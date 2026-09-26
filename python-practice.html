@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Coding Practice</title>
+    <link rel="stylesheet" href="python-practice.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🐍 Python Coding Practice</h1>
+    <p>Write Python programs and check your answers.</p>
+</header>
+
+<div class="container">
+
+<a href="index.html" class="back">← Back to Study Hub</a>
+
+<div class="score-box">
+    🏆 Score:
+    <span id="score">0</span> / 6
+</div>
+
+
+<!-- QUESTION 1 -->
+
+<div class="question">
+
+<h2>1. Calculator</h2>
+
+<p>
+Write a Python program to add two numbers.
+</p>
+
+<p><b>Example:</b> 10 + 20 = 30</p>
+
+<textarea id="answer1"
+placeholder="Write your Python code here..."></textarea>
+
+<button onclick="checkAnswer(1)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(1)">Show Answer</button>
+
+<p id="result1" class="result"></p>
+
+<pre id="solution1" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 2 -->
+
+<div class="question">
+
+<h2>2. List Operations</h2>
+
+<p>
+Create a Python list and display its elements.
+</p>
+
+<textarea id="answer2"
+placeholder="Write your Python code here..."></textarea>
+
+<button onclick="checkAnswer(2)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(2)">Show Answer</button>
+
+<p id="result2" class="result"></p>
+
+<pre id="solution2" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 3 -->
+
+<div class="question">
+
+<h2>3. Class & Object</h2>
+
+<p>
+Create a Student class and display student information.
+</p>
+
+<textarea id="answer3"
+placeholder="Write your Python code here..."></textarea>
+
+<button onclick="checkAnswer(3)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(3)">Show Answer</button>
+
+<p id="result3" class="result"></p>
+
+<pre id="solution3" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 4 -->
+
+<div class="question">
+
+<h2>4. Inheritance</h2>
+
+<p>
+Create a Person class and inherit it into Student class.
+</p>
+
+<textarea id="answer4"
+placeholder="Write your Python code here..."></textarea>
+
+<button onclick="checkAnswer(4)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(4)">Show Answer</button>
+
+<p id="result4" class="result"></p>
+
+<pre id="solution4" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 5 -->
+
+<div class="question">
+
+<h2>5. File Handling</h2>
+
+<p>
+Write a Python program to write data into a file.
+</p>
+
+<textarea id="answer5"
+placeholder="Write your Python code here..."></textarea>
+
+<button onclick="checkAnswer(5)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(5)">Show Answer</button>
+
+<p id="result5" class="result"></p>
+
+<pre id="solution5" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 6 -->
+
+<div class="question">
+
+<h2>6. Exception Handling</h2>
+
+<p>
+Write a Python program using try-except to handle
+division by zero.
+</p>
+
+<textarea id="answer6"
+placeholder="Write your Python code here..."></textarea>
+
+<button onclick="checkAnswer(6)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(6)">Show Answer</button>
+
+<p id="result6" class="result"></p>
+
+<pre id="solution6" class="solution"></pre>
+
+</div>
+
+</div>
+
+
+<script>
+
+let score = 0;
+let completed = [];
+
+const answers = {
+
+    1: {
+        keywords: ["input", "print", "+"],
+        solution:
+`a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+print("Sum =", a + b)`
+    },
+
+    2: {
+        keywords: ["list", "[", "]", "print"],
+        solution:
+`numbers = [10, 20, 30, 40, 50]
+
+print(numbers)`
+    },
+
+    3: {
+        keywords: ["class", "student", "__init__", "self"],
+        solution:
+`class Student:
+
+    def __init__(self, name, roll):
+        self.name = name
+        self.roll = roll
+
+    def show(self):
+        print("Name:", self.name)
+        print("Roll:", self.roll)
+
+
+s = Student("Shubhangi", 1448)
+s.show()`
+    },
+
+    4: {
+        keywords: ["class", "person", "student", "(person)", "self"],
+        solution:
+`class Person:
+
+    def show_name(self):
+        print("Shubhangi")
+
+
+class Student(Person):
+
+    def show_roll(self):
+        print(1448)
+
+
+s = Student()
+
+s.show_name()
+s.show_roll()`
+    },
+
+    5: {
+        keywords: ["open", "write", "w"],
+        solution:
+`file = open("message.txt", "w")
+
+file.write("Welcome to Python File Handling")
+
+file.close()
+
+print("Data written successfully.")`
+    },
+
+    6: {
+        keywords: ["try", "except", "zerodivisionerror"],
+        solution:
+`try:
+
+    a = 10
+    b = 0
+
+    result = a / b
+
+    print(result)
+
+except ZeroDivisionError:
+
+    print("Cannot divide by zero.")`
+    }
+};
+
+
+function checkAnswer(questionNumber) {
+
+    const answerBox =
+        document.getElementById("answer" + questionNumber);
+
+    const result =
+        document.getElementById("result" + questionNumber);
+
+    const userAnswer =
+        answerBox.value.toLowerCase().trim();
+
+
+    if (userAnswer === "") {
+
+        result.textContent =
+            "❌ Please write your answer first.";
+
+        result.className = "result wrong";
+
+        return;
+    }
+
+
+    const requiredKeywords =
+        answers[questionNumber].keywords;
+
+    let matched = 0;
+
+
+    requiredKeywords.forEach(function(keyword) {
+
+        if (userAnswer.includes(keyword.toLowerCase())) {
+            matched++;
+        }
+
+    });
+
+
+    const percentage =
+        (matched / requiredKeywords.length) * 100;
+
+
+    if (percentage >= 70) {
+
+        if (!completed.includes(questionNumber)) {
+
+            score++;
+            completed.push(questionNumber);
+
+            document.getElementById("score").textContent = score;
+        }
+
+        result.textContent =
+            "✅ Correct! Required Python concepts are present.";
+
+        result.className = "result correct";
+
+    } else {
+
+        result.textContent =
+            "❌ Incorrect or incomplete answer.";
+
+        result.className = "result wrong";
+    }
+}
+
+
+function showAnswer(questionNumber) {
+
+    const solution =
+        document.getElementById("solution" + questionNumber);
+
+    solution.textContent =
+        answers[questionNumber].solution;
+
+    solution.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>

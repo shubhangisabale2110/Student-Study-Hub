@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Practice</title>
+    <link rel="stylesheet" href="dsa-practice.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🧠 DSA Practice</h1>
+    <p>Practice Data Structures and Algorithms.</p>
+</header>
+
+<div class="container">
+
+<a href="index.html" class="back">← Back to Study Hub</a>
+
+<div class="score-box">
+    🏆 Score:
+    <span id="score">0</span> / 6
+</div>
+
+
+<!-- QUESTION 1 -->
+
+<div class="question">
+
+<h2>1. Largest Element in Array</h2>
+
+<p>
+Write a program to find the largest element in an array.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+Input:
+10 25 15 40 30
+
+Output:
+40
+</pre>
+
+<textarea id="answer1"
+placeholder="Write your solution here..."></textarea>
+
+<button onclick="checkAnswer(1)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(1)">Show Answer</button>
+
+<p id="result1" class="result"></p>
+
+<pre id="solution1" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 2 -->
+
+<div class="question">
+
+<h2>2. Linear Search</h2>
+
+<p>
+Write an algorithm or program for Linear Search.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+Array: 10 20 30 40 50
+Search: 30
+
+Output:
+Element Found
+</pre>
+
+<textarea id="answer2"
+placeholder="Write your solution here..."></textarea>
+
+<button onclick="checkAnswer(2)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(2)">Show Answer</button>
+
+<p id="result2" class="result"></p>
+
+<pre id="solution2" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 3 -->
+
+<div class="question">
+
+<h2>3. Bubble Sort</h2>
+
+<p>
+Write a program to sort an array using Bubble Sort.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+Input:
+5 2 8 1 3
+
+Output:
+1 2 3 5 8
+</pre>
+
+<textarea id="answer3"
+placeholder="Write your solution here..."></textarea>
+
+<button onclick="checkAnswer(3)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(3)">Show Answer</button>
+
+<p id="result3" class="result"></p>
+
+<pre id="solution3" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 4 -->
+
+<div class="question">
+
+<h2>4. Time Complexity</h2>
+
+<p>
+What is the time complexity of a simple loop
+running n times?
+</p>
+
+<p><b>Expected Answer:</b> O(n)</p>
+
+<textarea id="answer4"
+placeholder="Write your answer here..."></textarea>
+
+<button onclick="checkAnswer(4)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(4)">Show Answer</button>
+
+<p id="result4" class="result"></p>
+
+<pre id="solution4" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 5 -->
+
+<div class="question">
+
+<h2>5. Binary Search</h2>
+
+<p>
+Write a program or algorithm for Binary Search.
+</p>
+
+<p>
+Remember: Binary Search works on a <b>sorted array</b>.
+</p>
+
+<textarea id="answer5"
+placeholder="Write your solution here..."></textarea>
+
+<button onclick="checkAnswer(5)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(5)">Show Answer</button>
+
+<p id="result5" class="result"></p>
+
+<pre id="solution5" class="solution"></pre>
+
+</div>
+
+
+<!-- QUESTION 6 -->
+
+<div class="question">
+
+<h2>6. Sum of Array</h2>
+
+<p>
+Write a program to find the sum of elements in an array.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+Input:
+10 20 30 40 50
+
+Output:
+150
+</pre>
+
+<textarea id="answer6"
+placeholder="Write your solution here..."></textarea>
+
+<button onclick="checkAnswer(6)">Check Answer</button>
+
+<button class="hint-btn"
+onclick="showAnswer(6)">Show Answer</button>
+
+<p id="result6" class="result"></p>
+
+<pre id="solution6" class="solution"></pre>
+
+</div>
+
+</div>
+
+
+<script>
+
+let score = 0;
+let completed = [];
+
+
+const answers = {
+
+    1: {
+        keywords: ["array", "largest", "for"],
+        solution:
+`int arr[] = {10, 25, 15, 40, 30};
+
+int largest = arr[0];
+
+for(int i = 1; i < 5; i++) {
+
+    if(arr[i] > largest) {
+        largest = arr[i];
+    }
+}
+
+cout << largest;`
+    },
+
+
+    2: {
+        keywords: ["array", "search", "for", "if"],
+        solution:
+`int arr[] = {10, 20, 30, 40, 50};
+
+int search = 30;
+
+for(int i = 0; i < 5; i++) {
+
+    if(arr[i] == search) {
+
+        cout << "Element Found";
+
+        break;
+    }
+}`
+    },
+
+
+    3: {
+        keywords: ["bubble", "for", "swap"],
+        solution:
+`for(int i = 0; i < n - 1; i++) {
+
+    for(int j = 0; j < n - i - 1; j++) {
+
+        if(arr[j] > arr[j + 1]) {
+
+            swap(arr[j], arr[j + 1]);
+        }
+    }
+}`
+    },
+
+
+    4: {
+        keywords: ["o(n)"],
+        solution:
+`Answer:
+
+O(n)
+
+A loop that runs n times has linear
+time complexity O(n).`
+    },
+
+
+    5: {
+        keywords: ["binary", "low", "high", "mid"],
+        solution:
+`int low = 0;
+int high = n - 1;
+
+while(low <= high) {
+
+    int mid = (low + high) / 2;
+
+    if(arr[mid] == key) {
+
+        cout << "Element Found";
+        break;
+    }
+
+    else if(arr[mid] < key) {
+        low = mid + 1;
+    }
+
+    else {
+        high = mid - 1;
+    }
+}`
+    },
+
+
+    6: {
+        keywords: ["array", "sum", "for"],
+        solution:
+`int arr[] = {10, 20, 30, 40, 50};
+
+int sum = 0;
+
+for(int i = 0; i < 5; i++) {
+
+    sum = sum + arr[i];
+}
+
+cout << "Sum = " << sum;`
+    }
+
+};
+
+
+function checkAnswer(questionNumber) {
+
+    const answerBox =
+        document.getElementById("answer" + questionNumber);
+
+    const result =
+        document.getElementById("result" + questionNumber);
+
+    const userAnswer =
+        answerBox.value.toLowerCase().trim();
+
+
+    if (userAnswer === "") {
+
+        result.textContent =
+            "❌ Please write your answer first.";
+
+        result.className = "result wrong";
+
+        return;
+    }
+
+
+    const requiredKeywords =
+        answers[questionNumber].keywords;
+
+    let matched = 0;
+
+
+    requiredKeywords.forEach(function(keyword) {
+
+        if (userAnswer.includes(keyword.toLowerCase())) {
+
+            matched++;
+        }
+
+    });
+
+
+    const percentage =
+        (matched / requiredKeywords.length) * 100;
+
+
+    if (percentage >= 70) {
+
+        if (!completed.includes(questionNumber)) {
+
+            score++;
+
+            completed.push(questionNumber);
+
+            document.getElementById("score").textContent =
+                score;
+        }
+
+
+        result.textContent =
+            "✅ Correct! Your answer contains the required concepts.";
+
+        result.className = "result correct";
+
+    } else {
+
+        result.textContent =
+            "❌ Incorrect or incomplete answer. Try again.";
+
+        result.className = "result wrong";
+    }
+
+}
+
+
+function showAnswer(questionNumber) {
+
+    const solution =
+        document.getElementById("solution" + questionNumber);
+
+    solution.textContent =
+        answers[questionNumber].solution;
+
+    solution.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>

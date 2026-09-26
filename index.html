@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub - Student Study Portal</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            📚 StudyHub
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#materials">Materials</a>
+            <a href="#planner">Planner</a>
+            <a href="#tools">Tools</a>
+            <a href="#exam">Exam Prep</a>
+            <a href="#coding">Coding</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME SECTION ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Your Smart Study Companion 🎓</h1>
+
+            <p>
+                Learn • Practice • Prepare • Succeed
+            </p>
+
+            <p class="hero-description">
+                StudyHub is a student-friendly platform that helps
+                students organize their studies, access learning
+                materials, prepare for exams and practice coding.
+            </p>
+
+            <a href="#materials" class="button">
+                Explore Study Materials
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUICK FEATURES ================= -->
+
+    <section class="features">
+
+        <h2>Everything You Need to Study</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <div class="icon">📚</div>
+                <h3>Study Materials</h3>
+                <p>
+                    Access notes and learning resources
+                    for different subjects.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">📅</div>
+                <h3>Study Planner</h3>
+                <p>
+                    Organize your daily study tasks
+                    and stay productive.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🧮</div>
+                <h3>Student Tools</h3>
+                <p>
+                    Use useful calculators and study
+                    productivity tools.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🎯</div>
+                <h3>Exam Preparation</h3>
+                <p>
+                    Prepare for exams with important
+                    questions and tips.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STUDY MATERIALS ================= -->
+
+    <section id="materials" class="section">
+
+        <h2>📖 Study Materials</h2>
+
+        <p class="section-description">
+            Choose a subject and start learning.
+        </p>
+
+        <div class="card-container">
+
+            <!-- C++ -->
+
+            <div class="subject-card">
+
+                <div class="subject-icon">💻</div>
+
+                <h3>C++ Programming</h3>
+
+                <p>
+                    Learn C++ basics, OOP concepts,
+                    functions, classes and programs.
+                </p>
+
+                <a href="cpp-notes.html" class="notes-btn">
+                View C++ Notes
+                </a>
+
+            </div>
+
+
+            <!-- Python -->
+
+            <div class="subject-card">
+
+                <div class="subject-icon">🐍</div>
+
+                <h3>Python</h3>
+
+                <p>
+                    Learn Python programming, OOP,
+                    file handling and basic programs.
+                </p>
+
+                <a href="python-notes.html" class="notes-btn">
+                    View Notes
+                </a>
+            </div>
+
+
+            <!-- DSA -->
+
+            <div class="subject-card">
+
+                <div class="subject-icon">🧠</div>
+
+                <h3>Data Structures & Algorithms</h3>
+
+                <p>
+                    Learn arrays, searching, sorting,
+                    complexity and basic algorithms.
+                </p>
+
+                <a href="dsa-notes.html" class="notes-btn">
+                    View Notes
+                </a>
+
+            </div>
+
+
+            <!-- DBMS -->
+
+            <div class="subject-card">
+
+                <div class="subject-icon">🗄️</div>
+
+                <h3>DBMS</h3>
+
+                <p>
+                    Learn database concepts, SQL,
+                    tables, keys and relationships.
+                </p>
+
+                <a href="dbms-notes.html" class="notes-btn">
+                    View Notes
+                </a>
+            </div>
+
+
+            <!-- AI ML -->
+
+            <div class="subject-card">
+
+                <div class="subject-icon">🤖</div>
+
+                <h3>AI & Machine Learning</h3>
+
+                <p>
+                    Explore Artificial Intelligence,
+                    Machine Learning and basic concepts.
+                </p>
+
+                <a href="ai-ml-notes.html" class="notes-btn">
+                    View Notes
+                </a>
+            </div>
+
+
+            <!-- Mathematics -->
+
+            <div class="subject-card">
+
+                <div class="subject-icon">📐</div>
+
+                <h3>Engineering Mathematics</h3>
+
+                <p>
+                    Practice important mathematical
+                    concepts and problem solving.
+                </p>
+
+               <a href="maths-notes.html" class="notes-btn">
+                    View Notes
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STUDY PLANNER ================= -->
+
+    <section id="planner" class="section planner-section">
+
+        <h2>📅 Study Planner</h2>
+
+        <p class="section-description">
+            Plan your day and complete your study goals.
+        </p>
+
+        <div class="planner-box">
+
+            <h3>Today's Study Plan</h3>
+
+            <div class="task-input">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your study task">
+
+                <button onclick="addTask()">
+                    Add Task
+                </button>
+
+            </div>
+
+            <ul id="taskList">
+
+                <li>
+                    <input type="checkbox">
+                    Complete C++ OOP revision
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                    Practice 5 DSA questions
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                    Revise Unit 1
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STUDENT TOOLS ================= -->
+
+    <section id="tools" class="section">
+
+        <h2>🧮 Student Tools</h2>
+
+        <p class="section-description">
+            Useful tools for students.
+        </p>
+
+        <div class="tools-container">
+
+
+            <!-- Percentage Calculator -->
+
+            <div class="tool-card">
+
+                <h3>📊 Percentage Calculator</h3>
+
+                <input
+                    type="number"
+                    id="obtainedMarks"
+                    placeholder="Obtained Marks">
+
+                <input
+                    type="number"
+                    id="totalMarks"
+                    placeholder="Total Marks">
+
+                <button onclick="calculatePercentage()">
+                    Calculate
+                </button>
+
+                <p id="percentageResult"></p>
+
+            </div>
+
+
+            <!-- CGPA Calculator -->
+
+            <div class="tool-card">
+
+                <h3>🎓 CGPA Calculator</h3>
+
+                <input
+                    type="number"
+                    id="sgpa1"
+                    step="0.01"
+                    placeholder="Semester 1 SGPA">
+
+                <input
+                    type="number"
+                    id="sgpa2"
+                    step="0.01"
+                    placeholder="Semester 2 SGPA">
+
+                <button onclick="calculateCGPA()">
+                    Calculate
+                </button>
+
+                <p id="cgpaResult"></p>
+
+            </div>
+
+
+            <!-- Pomodoro -->
+
+            <div class="tool-card">
+
+                <h3>⏱️ Study Timer</h3>
+
+                <div id="timer">
+                    25:00
+                </div>
+
+                <button onclick="startTimer()">
+                    Start
+                </button>
+
+                <button onclick="pauseTimer()">
+                    Pause
+                </button>
+
+                <button onclick="resetTimer()">
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EXAM PREPARATION ================= -->
+
+    <section id="exam" class="section exam-section">
+
+        <h2>🎯 Exam Preparation</h2>
+
+        <p class="section-description">
+            Prepare smarter with important questions and tips.
+        </p>
+
+        <div class="exam-container">
+
+
+            <div class="exam-card">
+
+                <h3>📘 DSA Important Questions</h3>
+
+                <ul>
+
+                    <li>What is an ADT?</li>
+
+                    <li>Explain Big-O notation.</li>
+
+                    <li>Explain Binary Search.</li>
+
+                    <li>Explain different sorting techniques.</li>
+
+                    <li>What is time complexity?</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="exam-card">
+
+                <h3>💻 C++ Important Questions</h3>
+
+                <ul>
+
+                    <li>What is a class and object?</li>
+
+                    <li>Explain inheritance.</li>
+
+                    <li>What is a constructor?</li>
+
+                    <li>Explain polymorphism.</li>
+
+                    <li>What is a virtual function?</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="exam-card">
+
+                <h3>🐍 Python Important Questions</h3>
+
+                <ul>
+
+                    <li>What is Python?</li>
+
+                    <li>Explain inheritance.</li>
+
+                    <li>What is exception handling?</li>
+
+                    <li>Explain file handling.</li>
+
+                    <li>What is a constructor?</li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="exam-tips">
+
+            <h3>💡 Exam Tips</h3>
+
+            <p>
+                ✔ Start revision early.
+            </p>
+
+            <p>
+                ✔ Practice previous questions.
+            </p>
+
+            <p>
+                ✔ Make short notes.
+            </p>
+
+            <p>
+                ✔ Take regular breaks.
+            </p>
+
+            <p>
+                ✔ Practice writing answers.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CODING PRACTICE ================= -->
+
+    <section id="coding" class="section">
+
+        <h2>👩‍💻 Coding Practice</h2>
+
+        <p class="section-description">
+            Improve your programming skills through practice.
+        </p>
+
+        <div class="coding-container">
+
+
+            <div class="coding-card">
+
+                <h3>💻 C++ Programs</h3>
+
+                <ul>
+
+                    <li>Hello World</li>
+
+                    <li>Calculator</li>
+
+                    <li>Prime Number</li>
+
+                    <li>Factorial</li>
+
+                    <li>Student Information</li>
+
+                    <li>Inheritance</li>
+
+                    <li>Constructor & Destructor</li>
+
+                </ul>
+
+                <a href="cpp-practice.html" class="practice-btn">
+                Start Practice
+                </a>
+
+            </div>
+
+
+            <div class="coding-card">
+
+                <h3>🐍 Python Programs</h3>
+
+                <ul>
+
+                    <li>Calculator</li>
+
+                    <li>List Operations</li>
+
+                    <li>Class & Object</li>
+
+                    <li>Inheritance</li>
+
+                    <li>File Handling</li>
+
+                    <li>Exception Handling</li>
+
+                </ul>
+
+                <a href="python-practice.html" class="practice-btn">
+                Start Practice
+                </a>
+            </div>
+
+
+            <div class="coding-card">
+
+                <h3>🧠 DSA Practice</h3>
+
+                <ul>
+
+                    <li>Array Problems</li>
+
+                    <li>Searching</li>
+
+                    <li>Sorting</li>
+
+                    <li>Time Complexity</li>
+
+                    <li>Binary Search</li>
+
+                    <li>Basic Algorithms</li>
+
+                </ul>
+
+                <a href="dsa-practice.html" class="practice-btn">
+                Start Practice
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MOTIVATION ================= -->
+
+    <section class="motivation">
+
+        <h2>✨ Keep Learning, Keep Growing!</h2>
+
+        <p>
+            "Success is the sum of small efforts,
+            repeated day after day."
+        </p>
+
+        <a href="#planner" class="button">
+            Start Studying
+        </a>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section contact-section">
+
+        <h2>📞 Contact Us</h2>
+
+        <p class="section-description">
+            Have a question or suggestion? Contact StudyHub.
+        </p>
+
+        <form onsubmit="submitForm(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required>
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Write your message..."
+                required></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>📚 StudyHub</h3>
+
+            <p>
+                Your Smart Study Companion
+            </p>
+
+            <p>
+                Learn • Practice • Prepare • Succeed
+            </p>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 StudyHub. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

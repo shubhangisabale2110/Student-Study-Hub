@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Coding Practice</title>
+    <link rel="stylesheet" href="cpp-practice.css">
+</head>
+
+<body>
+
+<header>
+    <h1>💻 C++ Coding Practice</h1>
+    <p>Write your answer and check whether it is correct.</p>
+</header>
+
+<div class="container">
+
+    <a href="index.html" class="back">← Back to Study Hub</a>
+
+    <div class="score-box">
+        🏆 Score:
+        <span id="score">0</span> / 7
+    </div>
+
+
+    <!-- QUESTION 1 -->
+    <div class="question">
+        <h2>1. Hello World</h2>
+
+        <p>Write a C++ program to print <b>Hello World</b>.</p>
+
+        <p><b>Expected Output:</b></p>
+
+        <pre>Hello World</pre>
+
+        <textarea id="answer1"
+            placeholder="Write your C++ code here..."></textarea>
+
+        <button onclick="checkAnswer(1)">Check Answer</button>
+        <button class="hint-btn" onclick="showAnswer(1)">Show Answer</button>
+
+        <p id="result1" class="result"></p>
+        <pre id="solution1" class="solution"></pre>
+    </div>
+
+
+    <!-- QUESTION 2 -->
+    <div class="question">
+        <h2>2. Calculator</h2>
+
+        <p>
+            Write a C++ program to add two numbers.
+        </p>
+
+        <p><b>Example Input:</b> 10 and 20</p>
+        <p><b>Expected Output:</b> 30</p>
+
+        <textarea id="answer2"
+            placeholder="Write your C++ code here..."></textarea>
+
+        <button onclick="checkAnswer(2)">Check Answer</button>
+        <button class="hint-btn" onclick="showAnswer(2)">Show Answer</button>
+
+        <p id="result2" class="result"></p>
+        <pre id="solution2" class="solution"></pre>
+    </div>
+
+
+    <!-- QUESTION 3 -->
+    <div class="question">
+        <h2>3. Prime Number</h2>
+
+        <p>
+            Write a C++ program to check whether a number is prime or not.
+        </p>
+
+        <p><b>Example Input:</b> 7</p>
+        <p><b>Expected Output:</b> Prime Number</p>
+
+        <textarea id="answer3"
+            placeholder="Write your C++ code here..."></textarea>
+
+        <button onclick="checkAnswer(3)">Check Answer</button>
+        <button class="hint-btn" onclick="showAnswer(3)">Show Answer</button>
+
+        <p id="result3" class="result"></p>
+        <pre id="solution3" class="solution"></pre>
+    </div>
+
+
+    <!-- QUESTION 4 -->
+    <div class="question">
+        <h2>4. Factorial</h2>
+
+        <p>
+            Write a C++ program to find the factorial of a number.
+        </p>
+
+        <p><b>Example:</b> Factorial of 5 = 120</p>
+
+        <textarea id="answer4"
+            placeholder="Write your C++ code here..."></textarea>
+
+        <button onclick="checkAnswer(4)">Check Answer</button>
+        <button class="hint-btn" onclick="showAnswer(4)">Show Answer</button>
+
+        <p id="result4" class="result"></p>
+        <pre id="solution4" class="solution"></pre>
+    </div>
+
+
+    <!-- QUESTION 5 -->
+    <div class="question">
+        <h2>5. Student Information</h2>
+
+        <p>
+            Create a C++ class Student with name, roll number and marks.
+            Display the student information.
+        </p>
+
+        <textarea id="answer5"
+            placeholder="Write your C++ code here..."></textarea>
+
+        <button onclick="checkAnswer(5)">Check Answer</button>
+        <button class="hint-btn" onclick="showAnswer(5)">Show Answer</button>
+
+        <p id="result5" class="result"></p>
+        <pre id="solution5" class="solution"></pre>
+    </div>
+
+
+    <!-- QUESTION 6 -->
+    <div class="question">
+        <h2>6. Inheritance</h2>
+
+        <p>
+            Create a base class Person and a derived class Student.
+        </p>
+
+        <textarea id="answer6"
+            placeholder="Write your C++ code here..."></textarea>
+
+        <button onclick="checkAnswer(6)">Check Answer</button>
+        <button class="hint-btn" onclick="showAnswer(6)">Show Answer</button>
+
+        <p id="result6" class="result"></p>
+        <pre id="solution6" class="solution"></pre>
+    </div>
+
+
+    <!-- QUESTION 7 -->
+    <div class="question">
+        <h2>7. Constructor & Destructor</h2>
+
+        <p>
+            Write a C++ program demonstrating constructor and destructor.
+        </p>
+
+        <textarea id="answer7"
+            placeholder="Write your C++ code here..."></textarea>
+
+        <button onclick="checkAnswer(7)">Check Answer</button>
+        <button class="hint-btn" onclick="showAnswer(7)">Show Answer</button>
+
+        <p id="result7" class="result"></p>
+        <pre id="solution7" class="solution"></pre>
+    </div>
+
+</div>
+
+
+<script>
+
+let score = 0;
+let completed = [];
+
+const answers = {
+
+    1: {
+        keywords: ["#include", "iostream", "cout", "hello world"],
+        solution:
+`#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello World";
+    return 0;
+}`
+    },
+
+    2: {
+        keywords: ["#include", "iostream", "cin", "cout", "+"],
+        solution:
+`#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+
+    cout << a + b;
+
+    return 0;
+}`
+    },
+
+    3: {
+        keywords: ["#include", "iostream", "cin", "for", "cout"],
+        solution:
+`#include <iostream>
+using namespace std;
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    bool prime = true;
+
+    if (n < 2)
+        prime = false;
+
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0) {
+            prime = false;
+            break;
+        }
+    }
+
+    if (prime)
+        cout << "Prime Number";
+    else
+        cout << "Not Prime";
+
+    return 0;
+}`
+    },
+
+    4: {
+        keywords: ["#include", "iostream", "cin", "for", "*"],
+        solution:
+`#include <iostream>
+using namespace std;
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    int factorial = 1;
+
+    for (int i = 1; i <= n; i++) {
+        factorial = factorial * i;
+    }
+
+    cout << factorial;
+
+    return 0;
+}`
+    },
+
+    5: {
+        keywords: ["class", "student", "name", "roll", "marks"],
+        solution:
+`#include <iostream>
+using namespace std;
+
+class Student {
+
+public:
+    string name;
+    int roll;
+    int marks;
+
+    void show() {
+        cout << name << endl;
+        cout << roll << endl;
+        cout << marks << endl;
+    }
+};
+
+int main() {
+
+    Student s;
+
+    s.name = "Shubhangi";
+    s.roll = 1448;
+    s.marks = 85;
+
+    s.show();
+
+    return 0;
+}`
+    },
+
+    6: {
+        keywords: ["class", "person", "student", "public", ":"],
+        solution:
+`#include <iostream>
+using namespace std;
+
+class Person {
+
+public:
+    string name;
+};
+
+class Student : public Person {
+
+public:
+    int roll;
+
+    void show() {
+        cout << name << endl;
+        cout << roll << endl;
+    }
+};
+
+int main() {
+
+    Student s;
+
+    s.name = "Shubhangi";
+    s.roll = 1448;
+
+    s.show();
+
+    return 0;
+}`
+    },
+
+    7: {
+        keywords: ["class", "constructor", "~", "destructor"],
+        solution:
+`#include <iostream>
+using namespace std;
+
+class Demo {
+
+public:
+
+    Demo() {
+        cout << "Constructor Called";
+    }
+
+    ~Demo() {
+        cout << "Destructor Called";
+    }
+};
+
+int main() {
+
+    Demo obj;
+
+    return 0;
+}`
+    }
+};
+
+
+function checkAnswer(questionNumber) {
+
+    const answerBox =
+        document.getElementById("answer" + questionNumber);
+
+    const result =
+        document.getElementById("result" + questionNumber);
+
+    const userAnswer =
+        answerBox.value.toLowerCase().trim();
+
+    if (userAnswer === "") {
+
+        result.textContent =
+            "❌ Please write your answer first.";
+
+        result.className = "result wrong";
+
+        return;
+    }
+
+    const requiredKeywords =
+        answers[questionNumber].keywords;
+
+    let matched = 0;
+
+    requiredKeywords.forEach(function(keyword) {
+
+        if (userAnswer.includes(keyword.toLowerCase())) {
+            matched++;
+        }
+
+    });
+
+    const percentage =
+        (matched / requiredKeywords.length) * 100;
+
+
+    if (percentage >= 70) {
+
+        if (!completed.includes(questionNumber)) {
+
+            score++;
+            completed.push(questionNumber);
+
+            document.getElementById("score").textContent = score;
+        }
+
+        result.textContent =
+            "✅ Correct! Your answer contains the required concepts.";
+
+        result.className = "result correct";
+
+    } else {
+
+        result.textContent =
+            "❌ Incorrect or incomplete answer. Check the required concepts.";
+
+        result.className = "result wrong";
+    }
+}
+
+
+function showAnswer(questionNumber) {
+
+    const solution =
+        document.getElementById("solution" + questionNumber);
+
+    solution.textContent =
+        answers[questionNumber].solution;
+
+    solution.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>

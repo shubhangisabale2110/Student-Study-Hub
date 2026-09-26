@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C++ Notes - StudyHub</title>
+
+    <link rel="stylesheet" href="cpp-notes.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">📚 StudyHub</div>
+
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </header>
+
+
+    <!-- Page Heading -->
+    <section class="notes-hero">
+
+        <h1>💻 C++ Programming Notes</h1>
+
+        <p>
+            Learn C++ from Basics to Object-Oriented Programming
+        </p>
+
+    </section>
+
+
+    <!-- Notes Container -->
+    <main class="notes-container">
+
+        <!-- Introduction -->
+        <div class="note-card">
+
+            <h2>1. Introduction to C++</h2>
+
+            <p>
+                C++ is a general-purpose programming language developed
+                by Bjarne Stroustrup.
+            </p>
+
+            <p>
+                It supports procedural programming, object-oriented
+                programming and generic programming.
+            </p>
+
+        </div>
+
+
+        <!-- Basic Structure -->
+        <div class="note-card">
+
+            <h2>2. Basic Structure of C++ Program</h2>
+
+            <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    cout &lt;&lt; "Hello World";
+
+    return 0;
+}</code></pre>
+
+            <p>
+                <b>#include &lt;iostream&gt;</b> is used for input and output.
+            </p>
+
+            <p>
+                <b>main()</b> is the starting point of a C++ program.
+            </p>
+
+        </div>
+
+
+        <!-- Variables -->
+        <div class="note-card">
+
+            <h2>3. Variables</h2>
+
+            <p>
+                A variable is a named memory location used to store data.
+            </p>
+
+            <pre><code>int age = 20;
+float marks = 85.5;
+char grade = 'A';</code></pre>
+
+        </div>
+
+
+        <!-- Data Types -->
+        <div class="note-card">
+
+            <h2>4. Data Types</h2>
+
+            <ul>
+                <li>int – Integer values</li>
+                <li>float – Decimal values</li>
+                <li>double – Large decimal values</li>
+                <li>char – Single character</li>
+                <li>bool – True or False</li>
+                <li>string – Collection of characters</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Input Output -->
+        <div class="note-card">
+
+            <h2>5. Input and Output</h2>
+
+            <p>
+                <b>cin</b> is used to take input from the user.
+            </p>
+
+            <p>
+                <b>cout</b> is used to display output.
+            </p>
+
+            <pre><code>int age;
+
+cout &lt;&lt; "Enter age: ";
+cin &gt;&gt; age;
+
+cout &lt;&lt; "Age = " &lt;&lt; age;</code></pre>
+
+        </div>
+
+
+        <!-- Operators -->
+        <div class="note-card">
+
+            <h2>6. Operators</h2>
+
+            <ul>
+                <li>Arithmetic: +, -, *, /, %</li>
+                <li>Relational: &gt;, &lt;, ==, !=</li>
+                <li>Logical: &amp;&amp;, ||, !</li>
+                <li>Assignment: =, +=, -=</li>
+            </ul>
+
+        </div>
+
+
+        <!-- If Else -->
+        <div class="note-card">
+
+            <h2>7. If-Else Statement</h2>
+
+            <p>
+                The if-else statement is used for decision making.
+            </p>
+
+            <pre><code>int marks = 75;
+
+if (marks &gt;= 40)
+{
+    cout &lt;&lt; "PASS";
+}
+else
+{
+    cout &lt;&lt; "FAIL";
+}</code></pre>
+
+        </div>
+
+
+        <!-- Loops -->
+        <div class="note-card">
+
+            <h2>8. Loops</h2>
+
+            <p>
+                Loops are used to execute a block of code repeatedly.
+            </p>
+
+            <h3>For Loop</h3>
+
+            <pre><code>for(int i = 1; i &lt;= 5; i++)
+{
+    cout &lt;&lt; i &lt;&lt; endl;
+}</code></pre>
+
+        </div>
+
+
+        <!-- Functions -->
+        <div class="note-card">
+
+            <h2>9. Functions</h2>
+
+            <p>
+                A function is a block of code designed to perform a
+                specific task.
+            </p>
+
+            <pre><code>int add(int a, int b)
+{
+    return a + b;
+}</code></pre>
+
+        </div>
+
+
+        <!-- OOP -->
+        <div class="note-card">
+
+            <h2>10. Object-Oriented Programming</h2>
+
+            <p>
+                C++ supports Object-Oriented Programming (OOP).
+            </p>
+
+            <ul>
+                <li>Class</li>
+                <li>Object</li>
+                <li>Encapsulation</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+                <li>Abstraction</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Class and Object -->
+        <div class="note-card">
+
+            <h2>11. Class and Object</h2>
+
+            <pre><code>class Student
+{
+public:
+
+    string name;
+
+    void show()
+    {
+        cout &lt;&lt; name;
+    }
+};
+
+int main()
+{
+    Student s;
+
+    s.name = "Shubhangi";
+
+    s.show();
+
+    return 0;
+}</code></pre>
+
+        </div>
+
+
+        <!-- Important Programs -->
+        <div class="note-card">
+
+            <h2>12. Important C++ Programs</h2>
+
+            <ol>
+                <li>Hello World</li>
+                <li>Addition of Two Numbers</li>
+                <li>Even or Odd Number</li>
+                <li>Positive or Negative Number</li>
+                <li>Largest of Three Numbers</li>
+                <li>Prime Number</li>
+                <li>Factorial</li>
+                <li>Palindrome Number</li>
+                <li>Class and Object</li>
+                <li>Inheritance</li>
+            </ol>
+
+        </div>
+
+
+        <!-- Exam Questions -->
+        <div class="note-card exam-card">
+
+            <h2>📝 Important Exam Questions</h2>
+
+            <ol>
+                <li>What is C++?</li>
+                <li>Explain features of C++.</li>
+                <li>What is a variable?</li>
+                <li>Explain data types in C++.</li>
+                <li>Explain if-else statement.</li>
+                <li>What is a loop?</li>
+                <li>What is a function?</li>
+                <li>What is OOP?</li>
+                <li>Explain class and object.</li>
+                <li>Explain inheritance and its types.</li>
+            </ol>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 StudyHub | C++ Learning Section
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

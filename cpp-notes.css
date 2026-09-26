@@ -1,0 +1,198 @@
+/* General Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* Header */
+
+header {
+    background: #4f46e5;
+    color: white;
+
+    padding: 18px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: white;
+    color: #4f46e5;
+}
+
+
+/* Hero Section */
+
+.notes-hero {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+
+    color: white;
+}
+
+.notes-hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.notes-hero p {
+    font-size: 18px;
+}
+
+
+/* Notes Container */
+
+.notes-container {
+    width: 85%;
+    max-width: 1000px;
+
+    margin: 40px auto;
+}
+
+
+/* Note Cards */
+
+.note-card {
+    background: white;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.note-card h2 {
+    color: #4f46e5;
+
+    margin-bottom: 15px;
+}
+
+.note-card h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.note-card p {
+    margin-bottom: 12px;
+}
+
+
+/* Lists */
+
+.note-card ul,
+.note-card ol {
+    padding-left: 25px;
+}
+
+.note-card li {
+    margin-bottom: 8px;
+}
+
+
+/* Code */
+
+pre {
+    background: #1e1e1e;
+
+    color: #ffffff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    overflow-x: auto;
+
+    margin: 15px 0;
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+
+/* Exam Card */
+
+.exam-card {
+    border-left: 6px solid #4f46e5;
+}
+
+
+/* Footer */
+
+footer {
+    background: #1f2937;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .notes-hero h1 {
+        font-size: 30px;
+    }
+
+    .notes-container {
+        width: 92%;
+    }
+
+    .note-card {
+        padding: 20px;
+    }
+
+    pre {
+        font-size: 13px;
+    }
+}
